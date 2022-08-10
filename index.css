@@ -2,10 +2,14 @@ body {
     font-style: arial;
     font-size: 130%;
     background-color: #33363d;
-    margin-top: 15%;
+    margin-top: 10%;
 }
-h3 {
+#date, #down {
     color: white;
+}
+
+#date {
+  width: 25%;
 }
 
 #down{
@@ -28,6 +32,9 @@ h3 {
   background-color: #41454e;
   width: 70%;
   padding: 15px;
+  border-radius: 7px;
+  border: 2px solid #41454e;
+  box-shadow: rgb(24, 24, 24) 0 0 25px;
 }
 
 .search-btn {
@@ -35,16 +42,47 @@ h3 {
   margin-left: 10%;
   padding: 1% 1%;
 }
-.img figure{
-  display: inline-block;
-  margin-top: -100px;
-  margin-right: 100px;
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-right: 50px;
 }
-.img figure img{
+.image-gallery::after {
+  content: "";
+  flex-basis: 350px;
+}
+
+.image-gallery > li {
+  flex-basis: 230px;
+  list-style-type: none;
+}
+.image-gallery li  img {
   width: 230px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 7px;
   border: 2px solid #41454e;
-  box-shadow: #666 0 0 25px;
+  box-shadow: rgb(24, 24, 24) 0 0 25px;
+}
+
+.image-gallery li img:hover {
+  animation: zoom-img-active .5s;
+}
+
+.image-gallery li img:not(:hover) {
+  animation: zoom-img-deactive .5s;
+}
+
+@keyframes zoom-img-active {
+  0% {transform: scale(100%);}
+  100% {transform: scale(115%);}
+}
+@keyframes zoom-img-deactive {
+  0% {transform: scale(115%);}
+  100% {transform: scale(100%);}
 }
 
 .search-btn:hover, #edit:hover, #plus:hover, #arrow:hover {
@@ -78,12 +116,12 @@ h3 {
 
 #check:checked~ .elements{
   display: block;
-  animation: click 1s;
+  animation: click .5s;
   transform: rotate(180deg);
 }
 #check:not(:checked)~ .elements{
   display: block;
-  animation: unclick 1s;
+  animation: unclick .5s;
 }
 #check{display: none;}
 
