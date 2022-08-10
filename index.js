@@ -11,3 +11,4 @@ function search() {
     search_term = document.getElementById("search").value;
     window.location.href = `https://www.google.com/search?q=${search_term.replace(' ', "+")}`;
 }
+//pushing test
