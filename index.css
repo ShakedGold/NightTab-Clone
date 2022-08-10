@@ -4,12 +4,16 @@ body {
     background-color: #33363d;
     margin-top: 10%;
 }
+* {
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
 #date, #down {
-    color: white;
+  color: white;
 }
 
 #date {
-  width: 25%;
+  width: 30%;
 }
 
 #down{
@@ -44,6 +48,7 @@ body {
 }
 
 .image-gallery {
+  visibility: inherit;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
