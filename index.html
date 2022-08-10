@@ -9,7 +9,7 @@
     <div class="searchbar">
       <h3 id="date"> 1:45 Wednesday/10th/August</h3>
       <input type="text" id="search" placeholder="Type to search">
-      <button class="enter">Enter</button>
+      <button class="enter" onclick="search()">Enter</button>
       
       <div class="buttons">
         <button id="plus" class="btn-style">➕</button>
@@ -22,13 +22,13 @@
       <div class='btn-style'>
         <button class="collapse">
           <input id='check' type='checkbox'/>
-          <label class='elements' for='check' onclick="test()">🔻</label>
+          <label class='elements' for='check' onclick="hide()">🔻</label>
         </button>
       </div>
     </div>
   </body>
   <div class="container">
-    <ul class="image-gallery">
+    <ul class="image-gallery" id="gallery">
       <li>
         <img src="images/bitcoin.jpg" alt="bitcoin.com">
       </li>
